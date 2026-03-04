@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bonzoq</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-inner">
+            <a href="/" class="logo">bonzoq</a>
+            <p class="tagline">software & stuff</p>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Blog</a></li>
+                    <li><a href="https://github.com/bonzoq">GitHub</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2026 bonzoq</p>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            <div class="post-meta">March 4, 2026</div>
+            <h1>I cloned a $50 fasting app with one prompt. It's now on the App Store.</h1>
+
+            <p>Paid mobile apps as a business model are quietly dying. Not because people stopped wanting software. Not because the App Store disappeared. But because the cost of building most apps just went to zero.</p>
+            <p>A week ago I proved this to myself.</p>
+
+            <hr>
+
+            <h2>The app</h2>
+            <p>I use an intermittent fasting app. I won't name it for obvious reasons.</p>
+            <p>From the data I was able to gather, it has roughly <strong>30 million monthly active users</strong>. The paid version costs around <strong>$50 for three months</strong>.</p>
+            <p>Functionally, the app is extremely simple.</p>
+            <p>It tracks fasting windows and shows you a visual history of your discipline. The core mechanic is psychological. When you see a long graph of days where you resisted eating after 4pm, you become less likely to break the streak.</p>
+            <p>And it works.</p>
+            <p>As a side note, I lost <strong>about 5 kg (&asymp;11 pounds)</strong> in four weeks.</p>
+            <p>I was using the free version, but the interstitial ads were more than annoying. So I briefly considered paying.</p>
+            <p>Then another thought crossed my mind.</p>
+            <p>Could I just clone it?</p>
+
+            <hr>
+
+            <h2>The experiment</h2>
+            <p>I took screenshots of the app and sent them to <strong>Claude Opus 4.6</strong>.</p>
+            <p>My prompt was simple:</p>
+            <blockquote>Describe the app in detail based on these screenshots and produce instructions for Claude Code to recreate it.</blockquote>
+            <p>Claude generated a full specification.</p>
+            <p>I added a few instructions:</p>
+            <ul>
+                <li>use <strong>CloudKit</strong> as the database</li>
+                <li>fasting reminders should be <strong>local notifications</strong>, not push</li>
+                <li>standard iOS UI patterns</li>
+                <li>basic fasting history charts</li>
+            </ul>
+            <p>That was basically it.</p>
+            <p>For context, I have been developing mobile apps for more than ten years. But honestly, a non-technical person could write prompts like this too.</p>
+            <p>I then pasted the specification into <strong>Claude Code Opus 4.6</strong>.</p>
+            <p>It generated the entire project.</p>
+            <p>I did not rewrite the code.</p>
+            <p>I did not redesign the architecture.</p>
+            <p>I <strong>literally submitted the first thing that came out.</strong></p>
+
+            <hr>
+
+            <h2>Shipping it</h2>
+            <p>I created:</p>
+            <ul>
+                <li>one screenshot from my <strong>iPhone</strong></li>
+                <li>one screenshot from an <strong>iPad simulator</strong></li>
+            </ul>
+            <p>Uploaded the build.</p>
+            <p>And waited.</p>
+            <p>Three days later, Apple approved it. I assume the review queue is filling up quickly these days.</p>
+            <p>The app is now live:</p>
+            <p><a href="https://apps.apple.com/pl/app/infastic/id6759506430">https://apps.apple.com/pl/app/infastic/id6759506430</a></p>
+            <p>Everything about it is AI generated:</p>
+            <ul>
+                <li>the <strong>name</strong></li>
+                <li>the <strong>icon</strong></li>
+                <li>the <strong>App Store description</strong></li>
+                <li>the <strong>code</strong></li>
+                <li>the <strong>new screenshots</strong></li>
+            </ul>
+
+            <hr>
+
+            <h2>A week later</h2>
+            <p>A week after release I actually tried using it myself.</p>
+            <p>I vibecoded a few improvements.</p>
+            <p>And honestly?</p>
+            <p>It's good.</p>
+            <p>Not a toy project. Not a broken prototype.</p>
+            <p>Just... a working fasting tracker.</p>
+
+            <hr>
+
+            <h2>What just happened</h2>
+            <p>The important part is not that I cloned a fasting app.</p>
+            <p>The important part is <strong>how trivial it was</strong>.</p>
+            <p>For the majority of paid apps, the real moat used to be <strong>development cost</strong>.</p>
+            <p>Someone had to:</p>
+            <ul>
+                <li>design the UX</li>
+                <li>write the code</li>
+                <li>test the app</li>
+                <li>maintain infrastructure</li>
+            </ul>
+            <p>That barrier is collapsing.</p>
+            <p>If a $50 subscription app with tens of millions of users can be cloned in a few prompts and submitted to the App Store in a few days, the economics change.</p>
+
+            <hr>
+
+            <h2>The coming wave</h2>
+            <p>Most paid utility apps are vulnerable.</p>
+            <p>Especially ones that are:</p>
+            <ul>
+                <li>simple trackers</li>
+                <li>calculators</li>
+                <li>planners</li>
+                <li>habit apps</li>
+                <li>productivity tools</li>
+                <li>dashboards</li>
+            </ul>
+            <p>Anything with a clear UI and limited backend logic can now be recreated quickly.</p>
+            <p>Not perfectly.</p>
+            <p>But <strong>good enough</strong>.</p>
+            <p>And good enough is all it takes when the alternative costs $200 a year.</p>
+
+            <hr>
+
+            <h2>What might survive</h2>
+            <p>Large apps will probably survive if they rely on things that cannot be cloned instantly.</p>
+            <p>Examples:</p>
+            <p><strong>User generated content</strong></p>
+            <p>Communities, social graphs, and user data are harder to replicate.</p>
+            <p>Or apps that rely on proprietary datasets.</p>
+            <p>Or apps where brand matters.</p>
+            <p>But standalone paid utilities?</p>
+            <p>The clock is ticking.</p>
+
+            <hr>
+
+            <h2>An uncomfortable realization</h2>
+            <p>I work in mobile development.</p>
+            <p>This is literally my job.</p>
+            <p>And I am the one writing this.</p>
+            <p>But after running this experiment I cannot escape the conclusion:</p>
+            <p><strong>paid apps are already dead.</strong></p>
+            <p>They just do not know it yet.</p>
+        </article>
+    </main>
+</body>
+</html>
