@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bonzoq</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --fg: #1a1a1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111111;
+      --fg: #ededed;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+  }
+</style>
+</head>
+<body>
+  <h1>bonzoq</h1>
+</body>
+</html>
